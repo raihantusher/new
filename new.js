@@ -34,3 +34,6 @@ var dog = new Dog();
 dog.bark();
 dog.move(10);
 dog.bark();
+var news;
+news = "wow";
+console.log(news);
