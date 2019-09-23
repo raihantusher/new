@@ -1,32 +1,36 @@
-"use strict";
-exports.__esModule = true;
-var ZipCodeValidator_1 = require("./ZipCodeValidator");
-var myValidator = new ZipCodeValidator_1.ZipCodeValidator();
-function greeter(person) {
-    return "Hello, " + person;
-}
-var user = "Jane User";
-document.body.textContent = greeter(user);
-var isDone = false;
-var color = "blue";
-var x;
-x = ["hello", 10];
-console.log(x[1]);
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 1] = "Red";
-    Color[Color["Green"] = 2] = "Green";
-    Color[Color["Blue"] = 4] = "Blue";
-})(Color || (Color = {}));
-var c = Color.Green;
-function createSquare(config) {
-    var newSquare = { color: "white", area: 100 };
-    if (config.color) {
-        newSquare.color = config.color;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Animal = /** @class */ (function () {
+    function Animal() {
     }
-    if (config.width) {
-        newSquare.area = config.width * config.width;
+    Animal.prototype.move = function (distanceInMeters) {
+        if (distanceInMeters === void 0) { distanceInMeters = 0; }
+        console.log("Animal moved " + distanceInMeters + "m.");
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    return newSquare;
-}
-var mySquare = createSquare({ color: "black" });
+    Dog.prototype.bark = function () {
+        console.log('Woof! Woof!');
+    };
+    return Dog;
+}(Animal));
+var dog = new Dog();
+dog.bark();
+dog.move(10);
+dog.bark();
