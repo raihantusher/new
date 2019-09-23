@@ -14,6 +14,3 @@ const dog = new Dog();
 dog.bark();
 dog.move(10);
 dog.bark();
-let news:string;
-news="wow";
-console.log(news);
