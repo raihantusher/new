@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-hello world
-hello world+
-wow
-=======
-hello world
->>>>>>> parent of ba63384... wow
